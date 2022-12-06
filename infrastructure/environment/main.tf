@@ -15,6 +15,8 @@ provider "aws" {
 
 locals {
   sg_rule_all_ip = ["0.0.0.0/0"]
-  java_app_application_name = "customer-api"
+  customer_api_application_name = "customer-api"
+  notification_api_application_name = "notification-api"
+  login_api_application_name = "login-api"
   cluster_name = "${var.environment}-backend-apis"
 }
