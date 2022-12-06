@@ -102,10 +102,11 @@ module "application_ecs_service" {
     container_port    = var.application.port
   }]
 
-  capacity_providers = var.application.providers #Ainda não existe data source para capacity provider
+  capacity_providers = var.application.providers
 
   depends_on = [
     data.aws_ecs_cluster.cluster,
-    module.application_task_definition
+    module.application_task_definition,
+    module.application_target_group
   ]
 }
