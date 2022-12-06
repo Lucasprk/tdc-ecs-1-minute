@@ -40,9 +40,9 @@ def runPipeline(projectName, branch){
         }
     }
 
-    stage(name: 'Deploy'){
-        ecsDeploy(branch, BUILD_NUMBER, projectName, PARAM_ENVIRONMENT.toLowerCase())
-    }
+//    stage(name: 'Deploy'){
+//        ecsDeploy(branch, BUILD_NUMBER, projectName, PARAM_ENVIRONMENT.toLowerCase())
+//    }
 }
 
 def fixBranchName(branch){
