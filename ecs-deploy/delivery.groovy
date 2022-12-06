@@ -13,8 +13,6 @@ node('terraform'){
         executeShCommand("cp -R applications/$PARAM_APP_NAME/devops/ecs/${PARAM_ENVIRONMENT.toLowerCase()}/* $modulesPath ")
     }
 
-    def credentials = "aws-tdc-qa"
-
     stage(name: 'Deploy'){
         timeout(time: 10, unit: "MINUTES"){
             dir(modulesPath){
