@@ -16,7 +16,7 @@ node('terraform'){
     def credentials = "aws-tdc-qa"
 
     stage(name: 'Destroy'){
-        timeout(time: 10, unit: "MINUTES"){
+        timeout(time: 30, unit: "MINUTES"){
             dir(modulesPath){
                 executeShCommand('terraform  init -no-color -backend-config=backend.conf')
                 executeShCommand("terraform apply --destroy -no-color -auto-approve -var image_version=destroy")
