@@ -1,0 +1,83 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "cloudwatch:PutMetricData"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Sid": "MetricsAccess"
+    },
+    {
+      "Action": [
+        "logs:PutLogEvents",
+        "logs:CreateLogStream",
+        "logs:DescribeLogStreams",
+        "logs:DescribeLogGroups"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Sid": "CloudWatchLogsAccess"
+    },
+    {
+      "Action": [
+        "ecr:GetAuthorizationToken",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetRepositoryPolicy",
+        "ecr:DescribeRepositories",
+        "ecr:ListImages",
+        "ecr:DescribeImages",
+        "ecr:BatchGetImage",
+        "ecr:GetLifecyclePolicy",
+        "ecr:GetLifecyclePolicyPreview",
+        "ecr:ListTagsForResource",
+        "ecr:DescribeImageScanFindings"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "sqs:ChangeMessageVisibility",
+        "sqs:DeleteMessage",
+        "sqs:ReceiveMessage",
+        "sqs:SendMessage",
+        "sqs:GetQueueAttributes",
+        "sqs:GetQueueUrl",
+        "sqs:ListDeadLetterSourceQueues",
+        "sqs:ListQueues"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Sid": "QueueAccess"
+    },
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "sns:ListTagsForResource",
+        "sns:ListSubscriptionsByTopic",
+        "sns:GetTopicAttributes",
+        "sns:ListSMSSandboxPhoneNumbers",
+        "sns:ListTopics",
+        "sns:GetPlatformApplicationAttributes",
+        "sns:Unsubscribe",
+        "sns:GetSubscriptionAttributes",
+        "sns:ListSubscriptions",
+        "sns:CheckIfPhoneNumberIsOptedOut",
+        "sns:ListOriginationNumbers",
+        "sns:ListPhoneNumbersOptedOut",
+        "sns:ListEndpointsByPlatformApplication",
+        "sns:GetEndpointAttributes",
+        "sns:Publish",
+        "sns:GetSMSSandboxAccountStatus",
+        "sns:Subscribe",
+        "sns:GetSMSAttributes",
+        "sns:ListPlatformApplications"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

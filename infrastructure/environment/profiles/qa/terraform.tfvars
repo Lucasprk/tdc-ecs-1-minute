@@ -1,0 +1,7 @@
+profile =  "qa"
+region = "us-east-1"
+account = "851759692963"
+environment = "qa"
+vpc_id = "vpc-d2c466af"
+key_pair = "tdc"
+ecs_instances_ami = "ami-004bf28d7e5cfae00"
